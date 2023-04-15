@@ -11,6 +11,7 @@ var profesion = document.getElementById('profesion');
 var motivacion = document.getElementById('motivacion');
 
 var error = document.getElementById('error');
+error.style.color = 'red';
 
 var form = document.getElementById('formulario');
     form.addEventListener('submit', function(evt){
@@ -18,10 +19,16 @@ var form = document.getElementById('formulario');
 
         var mensajesError = [];
 
-        if(rut.value === null || rut.value === ''){
-            mensajesError.push("Ingresa tu rut");
+       
+        if (rut.length < 9 || rut.length > 10) {
+            errorRut.textContent = "El RUT debe tener entre 9 y 10 caracteres.";
+            rutInput.setCustomValidity("Invalid");
+          } else {
+            errorRut.textContent = "";
+            rutInput.setCustomValidity("");
         }
-        if(apellidopaterno.value === null || apellidopaterno.value === ''){
+        
+       /* if(apellidopaterno.value === null || apellidopaterno.value === ''){
             mensajesError.push("Ingresa tu apellido paterno");
         }
         if(rapellidomaterno.value === null || rapellidomaterno.value === ''){
@@ -51,6 +58,9 @@ var form = document.getElementById('formulario');
         if(motivacion.value === null || motivacion.value === ''){
             mensajesError.push("Ingresa tu motivacin");
         }
+
+
+        */
 
         error.innerHTML = mensajesError.join(', ');
         return false;       
