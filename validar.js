@@ -20,13 +20,10 @@ var form = document.getElementById('formulario');
         var mensajesError = [];
 
        
-        if (rut.length < 9 || rut.length > 10) {
-            errorRut.textContent = "El RUT debe tener entre 9 y 10 caracteres.";
-            rutInput.setCustomValidity("Invalid");
-          } else {
-            errorRut.textContent = "";
-            rutInput.setCustomValidity("");
+        if(rut.value.length < 9 || rut.value.length > 10) {
+            mensajesError.push("El rut debe tener entre 9 y 10 caracteres.");
         }
+
         
        /* if(apellidopaterno.value === null || apellidopaterno.value === ''){
             mensajesError.push("Ingresa tu apellido paterno");
