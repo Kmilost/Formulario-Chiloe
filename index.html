@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chiloe</title>
+    
+</head>
+<body>
+ 
+    <h1>Fundación Chile Limpio</h1>
 
+
+    <form action="" id = 'formulario'>
+        <div>
+            <label for="rut">Rut:</label>
+            <input type="text" id = 'rut'>
+        </div>
+        <br>
+        <div>
+            <label for="apellidopaterno">Apellido Paterno:</label>
+            <input type="text" id = 'apellidopaterno'>
+        </div>
+        <br>
+        <div>
+            <label for="apellidomaterno">Apellido Materno:</label>
+            <input type="text" id = 'apellidomaterno'>
+        </div>
+        <br>
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id = 'nombre'>
+        </div>
+        <br>
+        <div>
+            <label for="fechanacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id = 'fechanacimiento'>
+        </div>
+        <br>
+        <div>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="18" max="35">
+        </div>
+        <br>
+        <div>
+            <label for="genero">Genero:</label>
+                <select id="genero">
+                    <option value="1">Masculino</option>
+                    <option value="2">Femenino</option>
+                    <option value="3">Otro</option>
+                </select>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id = 'email'>
+        </div>
+        <br>
+        <div>
+            <label for="celular">Celular:</label>
+            <input type="number" id = 'celular'>
+        </div>
+        <br>
+        <div>
+            <label for="profesion">Profesión:</label>
+            <input type="text" id = 'profesion'>
+        </div>
+        <br>
+        <div>
+            <label for="motivacion">Motivacion para postular al trabajo:</label>
+            <textarea cols="80" rowns="20" id = 'motivacion'></textarea>
+        </div>
+        <br><br>
+    
+        <input type="submit"  value="Enviar">
+
+        <input type="submit"  value="Crear Carta">
+    </form>
+
+
+    <div id="error">
+    </div>   
+
+    
+</body>
+</html>

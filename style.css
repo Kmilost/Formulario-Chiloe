@@ -1,0 +1,14 @@
+
+
+
+
+label{
+    display: block;
+    float: left;
+    width: 90px;
+}
+
+body{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(125,185,198,1) 45%, rgba(0,110,133,1) 80%);
+}
