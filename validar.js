@@ -25,12 +25,18 @@ var form = document.getElementById('formulario');
         }
 
         
-       /* if(apellidopaterno.value === null || apellidopaterno.value === ''){
-            mensajesError.push("Ingresa tu apellido paterno");
+        if(apellidopaterno.value.length < 3 || apellidopaterno.value.length > 20){
+            mensajesError.push("El apellido paterno debe tener entre 3 y 20 caracteres");
         }
-        if(rapellidomaterno.value === null || rapellidomaterno.value === ''){
-            mensajesError.push("Ingresa tu rapellido materno");
+
+        if(rapellidomaterno.value.length < 3 || rapellidomaterno.value.length > 20){
+            mensajesError.push("El apellido materno debe tener entre 3 y 20 caracteres");
         }
+
+        if(nombre.value.length < 3 || nombre.value.length > 20){
+            mensajesError.push("El nombre debe tener entre 3 y 20 caracteres");
+        }
+
         if(fechanacimiento.value === null || fechanacimiento.value === ''){
             mensajesError.push("Ingresa tu fecha de nacimiento");
         }
@@ -43,21 +49,19 @@ var form = document.getElementById('formulario');
         if(email.value === null || email.value === ''){
             mensajesError.push("Ingresa tu email");
         }
-        if(celular.value === null || celular.value === ''){
+        if(celular.value.length < 9 || celular.value.length < 12 ){
             mensajesError.push("Ingresa tu celular");
         }
         if(profesion.value === null || profesion.value === ''){
             mensajesError.push("Ingresa tu profesión");
         }
-        if(rut.value === null || rut.value === ''){
-            mensajesError.push("Ingresa tu nombre");
-        }
+        
         if(motivacion.value === null || motivacion.value === ''){
             mensajesError.push("Ingresa tu motivacin");
         }
 
 
-        */
+        
 
         error.innerHTML = mensajesError.join(', ');
         return false;       
